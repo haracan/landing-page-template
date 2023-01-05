@@ -1,4 +1,5 @@
 var myFullpage = new fullpage("#fullpage", {
+    licenseKey: "gplv3-license",
     scrollOverflow: false,
     autoScrolling: true,
     navigation: true,
