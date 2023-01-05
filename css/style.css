@@ -173,7 +173,7 @@ h6 {
 
 
 /* =Подключение шрифтов 
-    -------------------------------------------------------------- */
+        -------------------------------------------------------------- */
 
 @font-face {
     font-display: swap;
@@ -201,7 +201,7 @@ h6 {
 
 
 /* =Не показывать скроллер  
-      -------------------------------------------------------------- */
+          -------------------------------------------------------------- */
 
  ::-webkit-scrollbar {
     width: 0px;
@@ -210,13 +210,13 @@ h6 {
 
 
 /* =Переключение цветовых тем 
-      -------------------------------------------------------------- */
+          -------------------------------------------------------------- */
 
  :root {
     --color-mode: 'light';
     /*--------------------------------------------------------------
-        =Theme I "Grunge" (Тема I "Гранж")  
-        -------------------------------------------------------------- */
+            =Theme I "Grunge" (Тема I "Гранж")  
+            -------------------------------------------------------------- */
     --color-dark: #033649;
     --color-dark-alpha: rgba(3, 54, 73, 0.9);
     --color-dark-07: #034652;
@@ -235,48 +235,48 @@ h6 {
     --color-log-2: #db1174;
     --color-log-3: #9b4ca7;
     /*--------------------------------------------------------------
-        =Theme II "Glamour" (Тема II "Гламур")  
-          -------------------------------------------------------------- */
+            =Theme II "Glamour" (Тема II "Гламур")  
+              -------------------------------------------------------------- */
     /* --color-dark: #283355;
-       --color-dark-alpha: rgba(40, 51, 85, 0.9);
-       --color-dark-07: #43448d;
-       --color-dark-05: #6658a3;
-       --color-light: #ffffff;
-       --color-light-alpha: rgba(255, 255, 255, 0.9);
-       --color-light-02: #f0f1fa;
-       --color-light-03: #ced1ee;
-       --color-light-04: #79d3fb;
-       --color-alternate-1: #4279c0;
-       --color-alternate-2: #fc86a9;
-       --color-moon: #c1cde9;
-       --color-sun: #ffd17e;
-       --color-log-0: #fcd679;
-       --color-log-1: #48acd0;
-       --color-log-2: #035ea4;
-       --color-log-3: #7603a4; */
+           --color-dark-alpha: rgba(40, 51, 85, 0.9);
+           --color-dark-07: #43448d;
+           --color-dark-05: #6658a3;
+           --color-light: #ffffff;
+           --color-light-alpha: rgba(255, 255, 255, 0.9);
+           --color-light-02: #f0f1fa;
+           --color-light-03: #ced1ee;
+           --color-light-04: #79d3fb;
+           --color-alternate-1: #4279c0;
+           --color-alternate-2: #fc86a9;
+           --color-moon: #c1cde9;
+           --color-sun: #ffd17e;
+           --color-log-0: #fcd679;
+           --color-log-1: #48acd0;
+           --color-log-2: #035ea4;
+           --color-log-3: #7603a4; */
     /*--------------------------------------------------------------
-        =Theme III "Red wine" (Тема III "Красное вино")  
-          -------------------------------------------------------------- */
+            =Theme III "Red wine" (Тема III "Красное вино")  
+              -------------------------------------------------------------- */
     /* --color-dark: #000000;
-       --color-dark-alpha: rgba(0, 0, 0, 0.9);
-       --color-dark-07: #181727;
-       --color-dark-05: #531925;
-       --color-light: #ffffff;
-       --color-light-alpha: rgba(255, 255, 255, 0.9);
-       --color-light-02: #f1f5f8;
-       --color-light-03: #b7c2cc;
-       --color-light-04: #be8490;
-       --color-alternate-1: #1d2f3f;
-       --color-alternate-2: #c52640;
-       --color-moon: #94acc4;
-       --color-sun: #ffeabc;
-       --color-log-0: #dacecd;
-       --color-log-1: #33526d;
-       --color-log-2: #531c3a;
-       --color-log-3: #250d1b; */
+           --color-dark-alpha: rgba(0, 0, 0, 0.9);
+           --color-dark-07: #181727;
+           --color-dark-05: #531925;
+           --color-light: #ffffff;
+           --color-light-alpha: rgba(255, 255, 255, 0.9);
+           --color-light-02: #f1f5f8;
+           --color-light-03: #b7c2cc;
+           --color-light-04: #be8490;
+           --color-alternate-1: #1d2f3f;
+           --color-alternate-2: #c52640;
+           --color-moon: #94acc4;
+           --color-sun: #ffeabc;
+           --color-log-0: #dacecd;
+           --color-log-1: #33526d;
+           --color-log-2: #531c3a;
+           --color-log-3: #250d1b; */
     /*--------------------------------------------------------------
-        =Общие значения 
-          -------------------------------------------------------------- */
+            =Общие значения 
+              -------------------------------------------------------------- */
     --color-stroke: #273e52;
     --gr-dark: linear-gradient(to top, var(--color-dark-05), var(--color-dark-07), var(--color-dark));
     --gr-light: linear-gradient(to top, var(--color-light-02), var(--color-light-03), var(--color-light-04));
@@ -344,7 +344,7 @@ html {
 
 
 /* =Текст 
-       -------------------------------------------------------------- */
+           -------------------------------------------------------------- */
 
 h1 {
     font-size: calc(2vw + 2vh + 1.6vmin);
@@ -385,11 +385,12 @@ p,
 
 
 /* =Контент 
-       -------------------------------------------------------------- */
+           -------------------------------------------------------------- */
 
 .section {
     --indent: clamp(0.1em, 1vw, 0.5em);
     text-align: center;
+    overflow: hidden;
 }
 
 .section h1 {
