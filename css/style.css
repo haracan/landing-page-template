@@ -189,12 +189,6 @@ h6 {
 
 @font-face {
     font-display: swap;
-    font-family: nunito-regular;
-    src: url('../fonts/nunito-regular.woff2');
-}
-
-@font-face {
-    font-display: swap;
     font-family: nunito-bold;
     src: url('../fonts/nunito-bold.woff2');
 }
@@ -203,9 +197,24 @@ h6 {
 /* =Не показывать скроллер  
           -------------------------------------------------------------- */
 
- ::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
+ ::-webkit-scrollbar,
+.dialog-inner::-webkit-scrollbar {
+    width: 0;
+}
+
+ ::-webkit-scrollbar-track,
+.dialog-inner::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dialog-inner::-webkit-scrollbar-thumb,
+.dialog-inner::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
 }
 
 
@@ -329,12 +338,11 @@ body,
 html {
     --aqum-bold: "aqum-bold", sans-serif;
     --nunito-medium: "nunito-medium", sans-serif;
-    --nunito-regular: "nunito-regular", sans-serif;
     --nunito-bold: "nunito-bold", sans-serif;
     vertical-align: baseline;
     font-size: 100%;
     line-height: 1;
-    font-family: var(--nunito-regular);
+    font-family: var(--nunito-medium);
     --br: 0.4em;
 }
 
@@ -361,7 +369,7 @@ p {
 
 p,
 .service-info-phone span {
-    font-size: calc(1vw + 1vh + 0.5vmin);
+    font-size: calc(1.3vw + 1.3vh + 0.65vmin);
 }
 
 .s0 p,
@@ -388,7 +396,7 @@ p,
            -------------------------------------------------------------- */
 
 .section {
-    --indent: clamp(0.1em, 1vw, 0.5em);
+    --indent: clamp(0.1em, 0.7vw, 0.5em);
     text-align: center;
     overflow: hidden;
 }
@@ -404,13 +412,19 @@ article {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .s0 article,
 .s5 article {
     width: 100%;
-    justify-content: space-evenly;
+    height: 90%;
+    padding: 0;
+}
+
+article,
+.s1 {
+    gap: clamp(1.2rem, 1rem + 3.5vw, 4rem);
 }
 
 .s5 ul li>* {
@@ -420,7 +434,6 @@ article {
 .branding {
     --size: calc(1.4vw + 1.4vh + 0.6vmin);
     --gap: min(1.4vw, 0.3rem);
-    position: relative;
     display: block;
     top: 0;
     width: 100%;
@@ -548,10 +561,6 @@ article {
     display: none;
 }
 
-.s1 {
-    gap: 7em;
-}
-
 .download__prices {
     width: 100%;
     padding: 1em var(--indent);
@@ -566,7 +575,7 @@ article {
 }
 
 .download__prices li {
-    --size: clamp(10em, 28vw, 20em);
+    --size: clamp(7em, 20vw, 20em);
     width: var(--size);
     height: var(--size);
     display: inline-block;
@@ -630,7 +639,6 @@ article {
 .entry-content {
     display: flex;
     flex-direction: column;
-    gap: calc(2.8vw + 2.8vh + 1.4vmin);
 }
 
 .s2 .entry-content,
@@ -696,6 +704,12 @@ article {
     padding: min(5vw, 3rem) 0;
 }
 
+.dialog-inner {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
+}
+
 .dialog-inner section {
     display: block;
     width: 100%;
@@ -749,11 +763,6 @@ article {
 
 .s0 {
     justify-content: flex-start;
-}
-
-.s0 article,
-.s5 article {
-    padding: 0;
 }
 
 .cover {
@@ -855,11 +864,12 @@ article {
         display: block;
     }
     article {
-        height: 90%;
+        height: auto;
     }
     .entry-content {
         align-items: center;
         flex-direction: row;
+        gap: clamp(1.2rem, 1rem + 2.5vw, 3rem);
     }
     .s2 .entry-content,
     .s4 .entry-content {

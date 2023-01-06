@@ -1,9 +1,6 @@
 var myFullpage = new fullpage("#fullpage", {
     licenseKey: "gplv3-license",
-    scrollOverflow: false,
-    autoScrolling: true,
     navigation: true,
-    scrollBar: true,
     normalScrollElements: ".dialog-inner",
     onLeave: (origin, destination, direction) => {
         const section = destination.item;

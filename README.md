@@ -30,4 +30,4 @@
 
 ## Лицензия
 
-[GPLv3](LICENSE)
+[LGPLv3](LICENSE)
